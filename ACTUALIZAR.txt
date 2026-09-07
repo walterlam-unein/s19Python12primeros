@@ -1,0 +1,11 @@
+VERSIÓN CORREGIDA 1.0.1
+
+Si la página anterior se queda en Cargando Python Grand Prix:
+
+1. En el repositorio de GitHub, reemplaza index.html de la raíz por el index.html de la raíz de este ZIP. No uses app/index.html.
+2. Conserva tu config.js si ya pegaste la URL de Google Sheets. No hace falta reconfigurar Apps Script.
+3. Guarda los cambios y espera a que GitHub Pages termine de publicar.
+4. Abre el enlace de la web y recarga con Ctrl + F5.
+
+La aplicación ya no depende de la carpeta assets: el código y los estilos van dentro de index.html.
+Si sigue apareciendo el texto antiguo Cargando sin cambiar después de 10 segundos, se está abriendo la versión anterior o un archivo de desarrollo. Comparte la URL exacta para revisar qué archivo está publicando GitHub.
