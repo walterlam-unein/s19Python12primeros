@@ -69,7 +69,7 @@ export async function saveResult(endpoint, attempt, adapters = {}) {
     try {
       const result = await read(endpoint, { action: 'status', classId: attempt.classId, attemptId: attempt.id, receiptKey: attempt.receiptKey });
       if (result.state === 'saved') {
-        if (result.attemptId !== attempt.id || !Number.isInteger(result.errors) || result.errors < 0 || result.errors > 12 || result.grade !== 10 - result.errors * 0.25) throw new Error('La confirmación del registro no es válida.');
+        if (result.attemptId !== attempt.id || !Number.isInteger(result.errors) || result.errors < 0 || result.errors > 12 || result.grade !== Math.max(7, 10 - result.errors)) throw new Error('La confirmación del registro no es válida.');
         return result;
       }
       if (result.state === 'rejected') throw Object.assign(new Error(result.error || 'El registro rechazó los datos. Comunícalo al docente.'), { rejected: true });
