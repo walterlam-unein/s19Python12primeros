@@ -1,7 +1,7 @@
 export const BANK_REVISION = 'python-gp-1';
 export const VERSIONS = ['A', 'B', 'C', 'D', 'E', 'F'];
 export const TOTAL = 12;
-export const gradeFor = errors => Math.max(7, Math.min(10, 10 - 0.25 * errors));
+export const gradeFor = errors => Math.max(7, Math.min(10, 10 - errors));
 export const formatGrade = grade => Number(grade).toLocaleString('es-EC', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 export function equalsAnswer(a, b) {
